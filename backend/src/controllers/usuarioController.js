@@ -3,13 +3,15 @@ const Usuario = mongoose.model('User');
 
 module.exports = {
     async insert (req, res){
-        const usuarios = await Usuario.create(req.body).then(()=>{
+        const usuarios = await Usuario.createIndexes(req.body).then(()=>{
             console.log("Deu certo")
             
         }).catch((err)=>{
             console.log("O erro foi: "+err)
         })
+
         return res.json(usuarios);
+        
     },
 
     async index(req, res){
@@ -22,19 +24,35 @@ module.exports = {
     },
 
     async details(req, res){
-        const usuarios = await Usuario.findById(req.params.id);
+        const usuarios = await Usuario.findById(req.params.id).then(()=>{
+            console.log("Deu certo")
+            
+        }).catch((err)=>{
+            console.log("O erro foi: "+err)
+        })
+
         return res.json(usuarios);
     },
 
     async update(req, res){
-        const usuarios = await Usuario.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        const usuarios = await Usuario.findByIdAndUpdate(req.params.id, req.body, {new: true}).then(()=>{
+            console.log("Deu certo")
+            
+        }).catch((err)=>{
+            console.log("O erro foi: "+err)
+        })
 
         return res.json(usuarios);
     },
 
     async delete(req, res){
         
-        await Usuario.findByIdAndRemove(req.params.id);
+        await Usuario.findByIdAndRemove(req.params.id).then(()=>{
+            console.log("Deu certo")
+            
+        }).catch((err)=>{
+            console.log("O erro foi: "+err)
+        })
         
         return res.send()
     }
