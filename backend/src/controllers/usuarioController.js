@@ -15,9 +15,9 @@ module.exports = {
     },
 
     async index(req, res){
-        const { page } = req.query;
 
-        const usuarios = await Usuario.find(req.params.id);
+
+        const usuarios = await Usuario.find(req.params);
         
         return res.json(usuarios);
     
@@ -48,7 +48,7 @@ module.exports = {
     async delete(req, res){
         
         await Usuario.findByIdAndRemove(req.params.id).then(()=>{
-            console.log("Deu certo")
+            console.log("deletado")
             
         }).catch((err)=>{
             console.log("O erro foi: "+err)
