@@ -4,7 +4,7 @@ const routes = express.Router();
 const carroController = require('../controllers/carroController')
 
 
-routes.post('/carro', carroController.insert)
+routes.post('/carroInsert', carroController.insert)
 
 routes.get('/carro', carroController.index)
 
