@@ -1,37 +1,28 @@
 const mongoose = require('mongoose')
-const UserSchema = new mongoose.Schema({
-    nome: {
+const CarSchema = new mongoose.Schema({
+    marca: {
         type: String,
         require: true,
         minlenght: 3,
         maxlenght: 100,
-    }, 
-    cpf: {
-        type: Number,
+    },
+    placa: {
+        type: String,
         require: true,
-        min: 11,
-        unique: true
+        minlenght: 6,
+        maxlenght: 7,
     },
-
-    active: {
-        type: Boolean,
-        default: true,
-        required: true
+    renavan: {
+        type: String,
+        require: true,
+        minlenght: 14,
+        maxlenght: 17,
     },
-
-    endereco: {
-        cidade: {
-            type: String,
-            require: true,
-            minlenght: 3
-        },
-
-        estado:{
-            type: String,
-            require: true,
-            minlenght: 2,
-            maxlenght: 2,
-        },
+    cor: {
+        type: String,
+        require: true,
+        minlenght: 3,
+        maxlenght: 30,
     },
     registro: {
         type: Date,
@@ -41,4 +32,4 @@ const UserSchema = new mongoose.Schema({
 });
 
 
-mongoose.model('User', UserSchema);
+mongoose.model('Car', CarSchema);

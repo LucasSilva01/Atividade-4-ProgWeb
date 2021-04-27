@@ -1,17 +1,17 @@
 const express = require('express');
 const routes = express.Router();
 
-const usuarioController = require('../controllers/usuarioController')
+const carroController = require('../controllers/carroController')
 
 
-routes.post('/usuarios', usuarioController.insert)
+routes.post('/carro', carroController.insert)
 
-routes.get('/usuarios', usuarioController.index)
+routes.get('/carro', carroController.index)
 
-routes.get('/usuarios/:id', usuarioController.details)
+routes.get('/carro/:id', carroController.details)
 
-routes.put('/usuarios/:id', usuarioController.update)
+routes.put('/carro/:id', carroController.update)
 
-routes.delete('/usuarios/:id', usuarioController.delete)
+routes.delete('/carro/:id', carroController.delete)
 
 module.exports = routes;

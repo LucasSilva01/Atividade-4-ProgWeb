@@ -1,53 +1,53 @@
 const mongoose = require('mongoose');
-const Usuario = mongoose.model('User');
+const Carro = mongoose.model('Car');
 
 module.exports = {
     async insert (req, res){
-        const usuarios = await Usuario.create(req.body).then(()=>{
+        const carro = await Carro.create(req.body).then(()=>{
             console.log("Deu certo")
             
         }).catch((err)=>{
             console.log("O erro foi: "+err)
         })
 
-        return res.json(usuarios);
+        return res.json(carro);
         
     },
 
     async index(req, res){
 
 
-        const usuarios = await Usuario.find(req.params);
+        const carro = await Carro.find(req.params);
         
-        return res.json(usuarios);
+        return res.json(carro);
     
     },
 
     async details(req, res){
-        const usuarios = await Usuario.findById(req.params.id).then(()=>{
+        const carro = await Carro.findById(req.params.id).then(()=>{
             console.log("Deu certo")
             
         }).catch((err)=>{
             console.log("O erro foi: "+err)
         })
 
-        return res.json(usuarios);
+        return res.json(carro);
     },
 
     async update(req, res){
-        const usuarios = await Usuario.findByIdAndUpdate(req.params.id, req.body, {new: true}).then(()=>{
+        const carro = await Carro.findByIdAndUpdate(req.params.id, req.body, {new: true}).then(()=>{
             console.log("Deu certo")
             
         }).catch((err)=>{
             console.log("O erro foi: "+err)
         })
 
-        return res.json(usuarios);
+        return res.json(carro);
     },
 
     async delete(req, res){
         
-        await Usuario.findByIdAndRemove(req.params.id).then(()=>{
+        await Carro.findByIdAndRemove(req.params.id).then(()=>{
             console.log("deletado")
             
         }).catch((err)=>{
