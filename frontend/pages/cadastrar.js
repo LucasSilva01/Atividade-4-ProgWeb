@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Link from 'next/link'
-
+import Link from 'next/link';
 
 class CadastrarCarro extends Component {
     constructor() {
@@ -83,7 +82,7 @@ class CadastrarCarro extends Component {
                             Cadastrar
                         </button>
                         <Link href = '/'>
-                         <button>Voltar</button>
+                            <button>Voltar</button>
                         </Link>
                     </fieldset>
                 </form>

@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState} from 'react';
 import api from '../services/services';
-import User from '../components/User';
-import Link from 'next/link';
+import User from '../components/User'
 const Carros =() => {
     const [carros, setCarros] = useState([]);
     const [allCarros, setAllCarros] = useState([]);
@@ -30,16 +29,13 @@ const Carros =() => {
        : carros;
 
     return (
-        
+
         <div>
             <h1>Lucas</h1>
             {filteredCarros.length > 0 &&(
        
             <User users = {filteredCarros}/>
             )}
-            <Link href = '/'>
-                <button>Voltar</button>
-            </Link>
         </div>
 
         )

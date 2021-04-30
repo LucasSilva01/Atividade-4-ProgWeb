@@ -1,13 +1,16 @@
+
+
+/*
 import React, { useCallback, useEffect, useState } from 'react';
 import api from '../services/services';
 import User from '../components/User'
 
 const AtualizaCarros extends Components {
 
-	/*
+
 	INFELIZMENTE NÃO CONSEGUI IMPLEMENTAR O NECESSÁRIO PARA REALIZAR A EDIÇÃO
 	DO CARRO, ENTÃO FIZ APENAS A PÁGINA DE EDIÇÃO.
-	*/
+
     return(
     	<div>
     		<form onSubmit={this.handleSubmit}>
@@ -95,3 +98,4 @@ const AtualizaCarros extends Components {
 }
 
 export default AtualizaCarros;
+*/

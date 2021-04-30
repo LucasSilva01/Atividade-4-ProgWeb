@@ -11,6 +11,10 @@ export default function Home() {
       <Link href = '/cadastrar'>
       <button>Cadastrar</button>
       </Link>
+
+      <Link href = '/delete'>
+      <button>Delete</button>
+      </Link>
     </div>
   )
 }
