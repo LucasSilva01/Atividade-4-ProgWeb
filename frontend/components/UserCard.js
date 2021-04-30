@@ -4,7 +4,9 @@ const CarCard = ({car}) => (
             <div>
                 <h1>
                    Modelo: {car.marca}<br/>
-                   Placa: {car.placa} 
+                   Placa: {car.placa} <br/>
+                   Renavan: {car.renavan}<br/>
+                   Cor: {car.cor}
                 </h1>
                 <h2>
                    

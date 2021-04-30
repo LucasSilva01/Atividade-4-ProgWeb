@@ -7,6 +7,10 @@ export default function Home() {
       <Link href = '/list'>
       <button>Listar</button>
       </Link>
+
+      <Link href = '/cadastrar'>
+      <button>Cadastrar</button>
+      </Link>
     </div>
   )
 }
