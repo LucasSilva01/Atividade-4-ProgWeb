@@ -1,4 +1,4 @@
-export default function CarEntity(){
+export default function carro(){
 
     
     const deleteCar = async event => {
